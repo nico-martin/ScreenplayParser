@@ -1,9 +1,9 @@
 {
   "name": "@nico-martin/screenplay-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "main": "dist/ScreenplayParser.cjs",
-  "module": "dist/ScreenplayParser.mjs",
+  "module": "dist/ScreenplayParser.js",
   "types": "dist/ScreenplayParser.d.ts",
   "license": "MIT",
   "files": [
@@ -15,7 +15,7 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/ScreenplayParser.mjs",
+      "import": "./dist/ScreenplayParser.js",
       "require": "./dist/ScreenplayParser.cjs"
     }
   },
