@@ -1,6 +1,6 @@
 {
   "name": "@nico-martin/screenplay-parser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "dist/ScreenplayParser.cjs",
   "module": "dist/ScreenplayParser.js",

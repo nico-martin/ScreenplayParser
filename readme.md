@@ -1,6 +1,6 @@
 # Screenplay Parser
 
-A fully typed JavaScript library to parse `Hollywood standard format` screenplays.
+A fully typed JavaScript library to parse **Hollywood standard format** screenplays.
 
 ## Installation
 
@@ -11,8 +11,8 @@ npm i @nico-martin/screenplay-parser
 ## Usage
 
 Let's take this screenplay as an example.
-1. Acts are defined by `ACT` followed by a roman numeral.
-2. Scenes are defined by `INT` or `EXT` followed by a location.
+1. Acts are defined by `ACT` followed by a number.
+2. Scenes are defined by `INT.` or `EXT.` followed by a location and instructions.
 3. Actions are defined by a block of text, aligned to the left.
 4. Speakers are defined by the name, which has between 25-30 spaces to the left
 5. Text passages are defined by a text block that has 10 spaces to the left
