@@ -227,7 +227,7 @@ class ScreenplayParser {
     }
     return scenes.map((scene) => ({
       ...scene,
-      text: this.joinItemsTexts(scene.items),
+      text: ScreenplayParser.joinItemsTexts(scene.items),
     }));
   };
 
@@ -251,7 +251,7 @@ class ScreenplayParser {
     }));
   };
 
-  private joinItemsTexts = (items: Array<Item>): string =>
+  public static joinItemsTexts = (items: Array<Item>): string =>
     items
       .map((item) => {
         if (item.type === ItemType.ACTION) {
