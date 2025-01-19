@@ -92,6 +92,13 @@ class ScreenplayParser {
           trimmedLine === trimmedLine.toUpperCase())
       ) {
         currentScene = trimmedLine;
+        items.push({
+          type: ItemType.ACTION,
+          action: trimmedLine,
+          act: currentAct,
+          scene: currentScene,
+          rawLine: line,
+        });
       } else if (
         this.inRange(leadingWhitespaces, this.indent[ScreenplayLineType.ACTION])
       ) {

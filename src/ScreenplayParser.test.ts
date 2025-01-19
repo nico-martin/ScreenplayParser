@@ -1,7 +1,8 @@
 import { expect, test } from "vitest";
 import ScreenplayParser from "./ScreenplayParser";
 
-const screenplay = `ACT ONE
+const screenplay = `
+                         ACT ONE
 
      FADE IN
 
@@ -2936,7 +2937,8 @@ test("empty screenplay", () => {
 
 test("knight rider screenplay", () => {
   const parsed = new ScreenplayParser(screenplay);
-  expect(parsed.getItems().length).toBe(1904);
-  expect(parsed.getScenes().length).toBe(81);
-  expect(parsed.getActs().length).toBe(4);
+  console.log(parsed.getScenes());
+  expect(parsed.getItems().length).toBe(1859);
+  expect(parsed.getScenes().length).toBe(228);
+  expect(parsed.getActs().length).toBe(5);
 });
