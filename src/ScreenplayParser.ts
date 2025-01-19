@@ -83,7 +83,14 @@ class ScreenplayParser {
         });
       } else if (trimmedLine.startsWith("ACT ")) {
         currentAct = trimmedLine;
-      } else if (trimmedLine.match(/^(EXT\.|INT\.)/)) {
+      } else if (
+        trimmedLine.match(/^(EXT\.|INT\.)/) ||
+        (this.inRange(
+          leadingWhitespaces,
+          this.indent[ScreenplayLineType.ACTION],
+        ) &&
+          trimmedLine === trimmedLine.toUpperCase())
+      ) {
         currentScene = trimmedLine;
       } else if (
         this.inRange(leadingWhitespaces, this.indent[ScreenplayLineType.ACTION])
